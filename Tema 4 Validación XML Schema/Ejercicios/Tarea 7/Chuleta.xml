@@ -1,0 +1,30 @@
+<!--Sin espacio de nombres-->
+<!--XSD-->
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+<!--XML-->
+<raiz xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="esquema.xsd">
+
+<!--Con espacio de nombres-->
+<!--XML-->
+<persoa xmlns="http://exemplo.com/esquema"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://exemplo.com/esquema exemploConNamespace.xsd">
+<!--XSD-->
+<xs:schema 
+  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://exemplo.com/esquema"
+  elementFormDefault="qualified">
+
+   
+    
+<xs:element name  type  default|fixed> 
+xs:string
+xs:integer positiveInteger nonNegative negative nonPositive
+xs:float double
+xs:time date
+
+<xs:attribute name type default|fixed use ="optional|required">
+

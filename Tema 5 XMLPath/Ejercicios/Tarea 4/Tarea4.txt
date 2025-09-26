@@ -1,0 +1,20 @@
+a.) Os comentarios.
+//comment()
+
+
+b.) Os comentarios da película "Leaving Las Vegas"..
+//película[título="Leaving Las Vegas"]/comment()
+
+
+c.) As películas de xénero "Drama".
+//película[xénero="Drama"]
+
+
+d.) Os nomes das actrices.
+//actor[sexo="muller"]/nome
+
+
+e.) Os elementos non baleiros (que conteñen algún texto).
+//*[text()]
+
+(//* selecciona todos los elementos asi como //@* todos los atributos)

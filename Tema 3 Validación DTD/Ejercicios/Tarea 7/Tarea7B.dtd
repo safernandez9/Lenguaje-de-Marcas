@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT Informe (Descripcion*, Seguro+, FechaInforme)>
+<!ELEMENT FechaInforme EMPTY>
+<!ELEMENT Seguro (Numero, (Cliente-Personal | Cliente-Empresa))>
+<!ELEMENT Descripcion (#PCDATA)>
+<!ELEMENT Numero (#PCDATA)>
+<!ELEMENT Cliente-Personal (#PCDATA)>
+<!ELEMENT Cliente-Empresa (#PCDATA)>
+<!ATTLIST Seguro tipo (Edificio | Contenido) #REQUIRED>
+<!ATTLIST FechaInforme FechaInicio CDATA #REQUIRED
+                        FechaFin CDATA #IMPLIED>
+
+

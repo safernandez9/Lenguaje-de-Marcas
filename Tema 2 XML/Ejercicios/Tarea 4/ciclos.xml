@@ -1,0 +1,19 @@
+<?xml version="1.1" encoding="utf-8"?>
+<!-- ciclos.xml -->
+<ciclos>
+  <ciclo id="ASIR" grao="CS">
+    <módulo id="MP0370">
+      <nome>Planificación e administración de redes</nome>
+      <horas>213</horas>
+    </módulo>
+    <módulo id="MP0371">
+      <nome>Fundamentos hardware</nome>
+      <horas>107</horas>
+    </módulo>
+     …
+  </ciclo>
+  <ciclo id="DAW" grao="CS">
+    …
+  </ciclo>
+  …
+</ciclos>

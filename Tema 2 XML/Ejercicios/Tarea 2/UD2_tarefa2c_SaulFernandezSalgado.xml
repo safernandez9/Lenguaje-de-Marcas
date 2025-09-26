@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<breakfast_menu titulo="menú">
+  <food>
+    <name>Belgian Waffles</name>
+    <price>$5.95</price>
+    <description>Una descripción en griego: λόγος</description>
+    <calories>650</calories>
+  </food>
+
+  <food>
+    <name>Belgian Waffles</name>
+    <price>$5.95</price>
+    <description>Una descripción en griego: λόγος</description>
+    <calories>650</calories>
+  </food>
+</breakfast_menu>

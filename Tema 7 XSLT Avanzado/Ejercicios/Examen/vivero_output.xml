@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><Vivero>
+    <Árboles>
+        <Árbol num="1" familia="Robles" proveedor="">
+            <Ref>RobleCastella-01</Ref>
+            <Descripcion>Roble castellano de porte majestuoso y longevidad notable.</Descripcion>
+            <Altura>25m</Altura>
+            <Copa>15 m</Copa>
+            <Hojas>Hojas lobuladas y caducas</Hojas>
+            <Flores>Flores discretas en primavera</Flores>
+            <Raices>Raíces profundas y extendidas</Raices>
+            <Frutos>Bellotas de buena producción</Frutos>
+            <Clima>Templado</Clima>
+            <Suelo>Fértil y ligeramente calcáreo</Suelo>
+            <Conservacion>Común</Conservacion>
+        </Árbol>
+        <Árbol num="2" familia="Robles" proveedor="">
+            <Ref>RobleMadrilen-02</Ref>
+            <Descripcion>Roble madrileño, reconocido por su crecimiento vigoroso y resistencia.</Descripcion>
+            <Altura>20m</Altura>
+            <Hojas>Hojas redondeadas y caducas</Hojas>
+            <Flores>Flores pequeñas en verano</Flores>
+            <Raices>Raíces extendidas superficiales</Raices>
+            <Frutos>Bellotas medianas</Frutos>
+            <Clima>Templado</Clima>
+            <Suelo>Fértil con buen drenaje</Suelo>
+        </Árbol>
+        <Árbol num="3" familia="Coníferas" proveedor="">
+            <Ref>PinoSilvestre-03</Ref>
+            <Descripcion>Pino silvestre de follaje perenne y aroma resinoso.</Descripcion>
+            <Altura>30m</Altura>
+            <Hojas>Agujas densas</Hojas>
+            <Flores>No posee flores vistosas</Flores>
+            <Raices>Raíces pioneras extensas</Raices>
+            <Frutos>Piñas con semillas dispersas</Frutos>
+            <Clima>Frío</Clima>
+            <Suelo>Árido y rocoso</Suelo>
+        </Árbol>
+    </Árboles>
+    <Plantas>
+        <Planta num="1" familia="Orquídeas">
+            <Ref>OrquideaVioleta-101</Ref>
+            <Descripcion>Orquídea Violeta de belleza exótica y pétalos delicados.</Descripcion>
+        </Planta>
+        <Planta num="2" familia="Orquídeas">
+            <Ref>OrquideaBlanca-102</Ref>
+            <Descripcion>Orquídea Blanca, delicada y de elegante fragancia.</Descripcion>
+        </Planta>
+        <Planta num="3" familia="Helechos">
+            <Ref>HelechoVerde-201</Ref>
+            <Descripcion>Helecho Verde, con fronda exuberante y textura delicada.</Descripcion>
+        </Planta>
+    </Plantas>
+</Vivero>

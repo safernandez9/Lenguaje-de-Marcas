@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<garderia xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="UD4_T3A_SaulFernandezSalgado.xsd">
+  <neno numeroExpedente="323" codigo="P44-323">
+    <nome>Pablo</nome>
+    <sexo>H</sexo>
+    <dataNacemento>2020-05-15</dataNacemento>
+    <peso>15.5</peso>
+    <altura>63</altura>
+    <vacunas>true</vacunas>
+    <idade anos="3" meses="6"/>
+    <contacto relación="nai">
+      <telefono>123456789</telefono>
+    </contacto>
+    <contacto relación="pai">
+      <telefono>987654321</telefono>
+    </contacto>
+  </neno>
+</garderia>

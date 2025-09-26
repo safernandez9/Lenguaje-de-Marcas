@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT elemento (a, b+, c*, d?)>
+<!ELEMENT elemento (#PCDATA)>
+<!ELEMENT elemento EMPTY>
+<!ELEMENT elemento (#PCDATA|imaxe)*>
+
+<!ATTLIST elemento nombreAtt1 CDATA #REQUIRED>
+<!ATTLIST elemento nombreAtt2 CDATA #IMPLIED>
+<!ATTLIST elemento nombreAtt3 CDATA #FIXED "valorFijo">
+<!ATTLIST elemento nombreAtt4 (españa|alemania) #REQUIRED)>
+<!ATTLIST elemento nombreAtt5 CDATA "valorPorDefecto">
+<!ATTLIST elemento nombreAtt6 ID #REQUIRED>
+<!ATTLIST elemento nombreAtt7 IDREF #REQUIRED>
+<!ATTLIST elemento nombreAtt8 IDREFS #REQUIRED>
+<!ATTLIST elemento nombreAtt9 NMTOKEN #REQUIRED>
+<!ATTLIST elemento nombreAtt10 NMTOKENS #REQUIRED>
+<!ATTLIST elemento nombreAtt11 ENTITY #REQUIRED>
+<!ATTLIST elemento nombreAtt ENTITIES #REQUIRED>
+
+
+<!ENTITY nombreEntidad SYSTEM "lo que aparecerá">
+<!ENTITY nombreEntidad SYSTEM "lo que aparecerá">
+<!ENTITY nombreEntidad SYSTEM "aaa.xml">
+<!ENTITY nombreEntidad SYSTEM "aaa.gif" NDATA gif>
+
+<!--Parametrizadas--> 2PASOS
+
+<!ENTITY % direccion "calle CDATA #REQUIRED">
+<!ATTLIST origen %direccion>
+
+<!-- NOTATION --> 3 pasos archivos 2 pasos VALIDACION
+
+<!NOTATION gif SYSTEM "editorGIF.exe">      <!Para el NDATA
+<!ENTITY nombreEntidad SYSTEM "aaa.gif" NDATA gif>
+<!ATTLIST raiz nombreAtt ENTITY #REQUIRED>
+
+<!NOTATION L SYSTEM "Luns">
+<horario dia = "L">                          <!--La attlist será de tipo NOTATION supongo-->
+
+
+<!-- Condicional-->
+Entidad con IGNORE/INCLUDE
+<![INCLUDE[]]>
+
+ 

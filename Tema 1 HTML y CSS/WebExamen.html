@@ -1,0 +1,173 @@
+<!--Ejercicio para el examen-->
+<!--Estilo del footer -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Saul" />
+    <meta name="description" content="Pagina para examen" />
+    <title>Practica examen</title>
+    <link rel="stylesheet" type="text/css" href="WebExamen.css" /> 
+
+    <!--Ejemplo de CSS AQUI (Se aplicará al h1 del header)-->
+    <style>
+        header h1 {
+            color: #4CAF50; /* Color verde */
+            font-size: 2em; /* Tamaño de fuente grande */
+            text-align: center; /* Centrado del texto */
+            margin-bottom: 20px; /* Espacio debajo del título */
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Cabecera o header</h1>
+        <nav>
+            <div class="DivIndice">
+                <h2>Indice y enlaces</h1>
+                <ul>
+                    <li><a href="#PrimerDivPalabras">Palabras</a></li>
+                    <li><a href="#SegundoDivListas">Listas</a></li>
+                    <li><a href="#PrimeraLinea">Acceso a primera linea</a></li>
+                    <li><a href="#">Volver Arriba</a></li>
+                    <!--Referencio pagina externa y que se abra en nueva pestaña-->
+                    <li><a href="Auxiliar.html#inicioAuxiliar" target="_blank"></a>Ir al inicio del doc auxiliar</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="SectionDivs">
+            <article id="Texto">
+                <div class="PrimerDivPalabras">
+                    <h1 id="PrimeraLinea">Practica Examen</h1>
+                    <p>Esta es una práctica de examen</p>
+                    <!--El texto en la misma linea aunque haya un salto de línea-->
+                    <hr />
+                    <p>Linea tras cambio de tema</p>
+                    <h2>Resaltar palabras</h2>
+                    <p>En este párrafo <strong>strong</strong> <em>Cursiva</em> <mark>Subrayado</mark>.</p>
+                    <p>Se define el <dfn>futbol</dfn> como un deporte para gente con piernas</p>
+                    <p>El partido empieza a las <time>21:00</time> del <time datetime="2025-06-08">8 de Junio</time></p>
+                    <details>
+                        <summary>Texto expandible</summary>
+                        <p>Si moreata pudo tu tambien</p>
+                    </details>
+                </div>
+
+                <div class="SegundoDivListas">
+                    <h3>Listas</h3>
+                    <ul>
+                        <li>Lista 1</li>
+                        <li>Lista 2</li>
+                        <ol>
+                            <li>Lista 3 (ordenada)</li>
+                            <li>Lista 4 (ordenada)</li>
+                        </ol>
+                    </ul>
+                    <h3>Lista de definición</h3>
+                    <dl>
+                        <dt>Saúl</dt>
+                        <dd>Alumno</dd>
+                        <dt>Marga</dt>
+                        <dd>Profesora</dd>
+                </div>
+            </article>
+            <article id="Imagenes">
+                <div class="TercerDivImagenes">
+                    <h3>Imagenes</h3>
+                    <img src="Foto1.jpg" alt="Meme Morata" title="BU, te asusto pero no mas que Morata en 11 metros"
+                        width="80px" height="80px" />
+                    <figure>
+                        <img src="Foto2.jpg" alt="Meme Morata 2" title="Morata manco" width="80px" height="80px" />
+                        <figcaption>Meme hilarante de morata con figcaption</figcaption>
+                    </figure>
+                </div>
+            </article>
+            <article id="Tablas">
+                <div class="CuartoDivTablas">
+                    <h3>Tablas</h3>
+                    <table>
+                        <caption>Ejemplo de Tabla Completa con Semántica y Estilos</caption>
+
+                        <!--Las dos primeras col serán de un color y las dos siguientes de otro-->
+                        <colgroup span="2" style="background-color: #f9f2d7;"></colgroup>
+                        <colgroup span="2" style="background-color: #f2d7d5;"></colgroup>
+
+                        <!--Los id de las cabeceras enlazan con el headers de sus celdas-->
+                        <thead>
+                            <tr>
+                                <!--Scope col, row, rowgroup y colgroup dicen a que referencia la etiqueta en la que se usan por lo que se usas solo
+                                en cabeceras sean horizontales o verticales. Funciona semanticamente no graficamente-->
+                                <th id="col1" scope="col">Nombre</th>
+                                <th id="col2" scope="col">Edad</th>
+                                <th id="col3" scope="col">Ciudad</th>
+                                <th id="col4" scope="col">País</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th id="grupoA" scope="rowgroup" colspan="4">Grupo A</th>
+                            </tr>
+                            <tr>
+                                <th id="fila1" headers="grupoA col1" scope="row">Ana</th>
+                                <td headers="fila1 col2 grupoA">23</td>
+                                <td colspan="2" headers="fila1 col3 grupoA">Madrid, España</td>
+                            </tr>
+                            <tr>
+                                <th id="grupoB" scope="rowgroup" colspan="4">Grupo B</th>
+                            </tr>
+                            <tr>
+                                <th id="fila3" scope="row">Sara</th>
+                                <td headers="fila3 col2" rowspan="2">28</td>
+                                <td headers="fila3 col3">París</td>
+                                <td headers="fila3 col4">Francia</td>
+                            </tr>
+                            <tr>
+                                <th id="fila4" scope="row">Marc</th>
+                                <!-- La celda de edad se comparte arriba (rowspan) -->
+                                <td headers="fila4 col3">Lyon</td>
+                                <td headers="fila4 col4">Francia</td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <!--Colspan y rowspan juntan el numero de columnas o filas especificado-->
+                                <td colspan="4">Total de registros: 5</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </article>
+            <article id="Audio y video">
+                <div class="QuintoDivAudioVideo">
+                    <h3>Audio y Video</h3>
+                    <!--Existen loop, nudet, type, autoplay y preload: auto, none, metadata-->
+                    <audio src="Audio.mp3" controls poster="Foto3.webp">
+                        <source src="Audio.mp3" type="audio/mpeg" />
+                        Texto si el navegador no soporta audio
+                    </audio>
+                    <video src="Video.mp4" controls poster="Foto3.webp" width="320" height="240">
+                        Texto si el navegador no soporta video
+                    </video>
+                </div>
+            </article>
+            <article id="Contenido Externo">
+
+            </article>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        <!--Ejemplo de CSS en etqueta-->
+        <p style="background-color: #4CAF50">Pie de pagina</p>
+        <p>Derechos reservados &copy; 2023</p>
+    </footer>
+</body>
+
+</html>

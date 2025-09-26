@@ -1,0 +1,35 @@
+/*DOCUMENTO CSS PARA EXAMENES WEB*/
+
+/* Estilos para pantallas de ordenador */
+
+/*SELECTORES*/
+
+
+
+
+
+
+
+@media only screen and (min-width: 769px) {
+
+    html {
+        background-image: url(Fondo1.jpg);
+    }
+
+    .DivIndice {
+        color: red;
+    }
+
+    #Texto {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
+
+    /* Selecciona todos los párrafos que son hermanos de una sección */
+    section~p {}
+
+
+
+   
+
+}

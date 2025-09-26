@@ -1,0 +1,10 @@
+<!ELEMENT Informe (Descripcion?, Seguro+, FechaInforme)>
+<!ELEMENT FechaInforme EMPTY>
+<!ELEMENT Seguro (Numero, (ClienteP | ClienteE))>
+<!ELEMENT Descripcion (#PCDATA)>
+<!ELEMENT Numero (#PCDATA)>
+<!ELEMENT ClienteP (#PCDATA)>
+<!ELEMENT ClienteE (#PCDATA)>
+<!ATTLIST Seguro tipo (Edificio | Contenido) #REQUIRED>
+<!ATTLIST FechaInforme FechaInicio CDATA #REQUIRED>
+<!ATTLIST FechaInforme FechaFin CDATA #IMPLIED>

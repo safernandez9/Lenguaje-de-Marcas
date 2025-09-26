@@ -1,0 +1,107 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Definición de tipo para el nombre largo -->
+  <xs:simpleType name="tipoNomeLongo">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="150"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definición del código del módulo profesional -->
+  <xs:simpleType name="codigoModulo">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="MP\d{4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definición del código del ciclo -->
+  <xs:simpleType name="codigoCiclo">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="C[S|M][A-Z]{3}\d{2}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Definición del módulo profesional -->
+  <xs:element name="modulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="duracion"/>
+        <xs:element ref="mome"/>
+        <xs:element ref="ciclo" maxOccurs="unbounded"/>
+        <xs:element ref="contidos"/>
+      </xs:sequence>
+      <xs:attribute name="codigo" type="codigoModulo" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Definición de la duración con restricciones -->
+  <xs:element name="duracion">
+    <xs:complexType>
+      <xs:attribute name="horas" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:positiveInteger"/>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="sesions" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:positiveInteger"/>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="sesionsSemanais" use="optional">
+        <xs:simpleType>
+          <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="21"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Definición del nombre del módulo (mome) utilizando tipoNomeLongo -->
+  <xs:element name="mome" type="tipoNomeLongo"/>
+
+  <!-- Definición del ciclo con restricciones en el código -->
+  <xs:element name="ciclo">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="tipoNomeLongo">
+          <xs:attribute name="codigo" type="codigoCiclo" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Definición de los contidos (contenidos) -->
+  <xs:element name="contidos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="UD" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Definición de la UD con restricciones en los atributos -->
+  <xs:element name="UD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="titulo" type="tipoNomeLongo"/>
+        <xs:element name="descrición" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="num" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="21"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="sesións" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="21"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

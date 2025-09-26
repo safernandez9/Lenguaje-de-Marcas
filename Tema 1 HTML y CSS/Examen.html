@@ -1,0 +1,233 @@
+<!--Ejercicio para el examen-->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Saul" />
+    <meta name="description" content="Pagina para examen" />
+    <title>Practica examen</title>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Cabecera o header</h1>
+    </header>
+    <nav>
+        <div class="DivIndice">
+            <h1>Indice y enlaces</h1>
+            <ul>
+                <li><a href="#PrimerDivPalabras">Palabras</a></li>
+                <li><a href="#SegundoDivListas">Listas</a></li>
+                <li><a href="#PrimeraLinea">Acceso a primera linea</a></li>
+                <li><a href="#">Volver Arriba</a></li>
+                <li><a href="Auxiliar.html#inicioAuxiliar"></a>Ir al inicio del doc auxiliar</li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="SectionDivs">
+            <article id="Texto">
+                <div class="PrimerDivPalabras">
+                    <h1 id="PrimeraLinea">Practica Examen</h1>
+                    <p>Esta es una práctica de examen</p>
+                    <!--El texto en la misma linea aunque haya un salto de línea-->
+                    <hr />
+                    <p>Linea tras cambio de tema</p>
+                    <h2>Resaltar palabras</h2>
+                    <p>En este <span id="palabraRandom">párrafo</span><label for=""></label> <strong>strong</strong> <em>Cursiva</em> <mark>Subrayado</mark>.</p>
+                    <p>Se define el <dfn>futbol</dfn> como un deporte para gente con piernas</p>
+                    <p>El partido empieza a las <time>21:00</time> del <time datetime="2025-06-08">8 de Junio</time></p>
+                    <details>
+                        <summary>Texto expandible</summary>
+                        <p>Si moreata pudo tu tambien</p>
+                    </details>
+                </div>
+
+                <div class="SegundoDivListas">
+                    <h3>Listas</h3>
+                    <ul>
+                        <li>Lista 1</li>
+                        <li>Lista 2</li>
+                        <ol>
+                            <li>Lista 3 (ordenada)</li>
+                            <li>Lista 4 (ordenada)</li>
+                        </ol>
+                    </ul>
+                    <h3>Lista de definición</h3>
+                    <dl>
+                        <dt>Saúl</dt>
+                        <dd>Alumno</dd>
+                        <dt>Marga</dt>
+                        <dd>Profesora</dd>
+                </div>
+            </article>
+            <article id="Imagenes">
+                <div class="TercerDivImagenes">
+                    <h3>Imagenes</h3>
+                    <img src="Foto1.jpg" alt="Meme Morata" title="BU, te asusto pero no mas que Morata en 11 metros"
+                        width="80px" height="80px" />
+                    <figure>
+                        <img src="Foto2.jpg" alt="Meme Morata 2" title="Morata manco" width="80px" height="80px" />
+                        <figcaption>Meme hilarante de morata con figcaption</figcaption>
+                    </figure>
+                </div>
+            </article>
+            <article id="Tablas">
+                <div class="CuartoDivTablas">
+                    <h3>Tablas</h3>
+                    <table>
+                        <caption>Ejemplo de Tabla Completa con Semántica y Estilos</caption>
+
+                        <!--Las dos primeras col serán de un color y las dos siguientes de otro-->
+                        <colgroup span="2" style="background-color: #f9f2d7;"></colgroup>
+                        <colgroup span="2" style="background-color: #f2d7d5;"></colgroup>
+
+                        <!--Los id de las cabeceras enlazan con el headers de sus celdas-->
+                        <thead>
+                            <tr>
+                                <!--Scope col, row, rowgroup y colgroup dicen a que referencia la etiqueta en la que se usan por lo que se usas solo
+                                en cabeceras sean horizontales o verticales. Funciona semanticamente no graficamente-->
+                                <th id="col1" scope="col">Nombre</th>
+                                <th id="col2" scope="col">Edad</th>
+                                <th id="col3" scope="col">Ciudad</th>
+                                <th id="col4" scope="col">País</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th id="grupoA" scope="rowgroup" colspan="4">Grupo A</th>
+                            </tr>
+                            <tr>
+                                <th id="fila1" headers="grupoA col1" scope="row">Ana</th>
+                                <td headers="fila1 col2 grupoA">23</td>
+                                <td colspan="2" headers="fila1 col3 grupoA">Madrid, España</td>
+                            </tr>
+                            <tr>
+                                <th id="grupoB" scope="rowgroup" colspan="4">Grupo B</th>
+                            </tr>
+                            <tr>
+                                <th id="fila3" scope="row">Sara</th>
+                                <td headers="fila3 col2" rowspan="2">28</td>
+                                <td headers="fila3 col3">París</td>
+                                <td headers="fila3 col4">Francia</td>
+                            </tr>
+                            <tr>
+                                <th id="fila4" scope="row">Marc</th>
+                                <!-- La celda de edad se comparte arriba (rowspan) -->
+                                <td headers="fila4 col3">Lyon</td>
+                                <td headers="fila4 col4">Francia</td>
+                            </tr>
+                        </tbody>
+
+                        <tfoot>
+                            <tr>
+                                <!--Colspan y rowspan juntan el numero de columnas o filas especificado-->
+                                <td colspan="4">Total de registros: 5</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </article>
+            <article id="Audio y video">
+                <div class="QuintoDivAudioVideo">
+                    <h3>Audio y Video</h3>
+                    <!--Existen loop, nudet, type, autoplay y preload: auto, none, metadata-->
+                    <audio src="Audio.mp3" controls poster="Foto3.webp">
+                        <source src="Audio.mp3" type="audio/mpeg" />
+                        Texto si el navegador no soporta audio
+                    </audio>
+                    <video src="Video.mp4" controls poster="Foto3.webp" width="320" height="240">
+                        Texto si el navegador no soporta video
+                    </video>
+                </div>
+            </article>
+            <article id="Formularios">
+                <div class="SextoDivFormularios">
+                    <h3>Formularios</h3>
+                    <form action="https://example.com/submit" method="post">
+
+
+                        <!--Maxima longitud, patron, mensaje de invalido, Vlor predefinido y numero de caracteres-->
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required maxlength="8" size="20" pattern="[A-Za-z]"
+                            oninvalid="this.setCustomValidity('Solo letras permitidas')" value="NombrePredefinido" />
+
+                        <!--Requerido y tipo password-->
+                        <label for="contrasena">Contraseña:</label>
+                        <input type="password" id="contrasena" name="contrasena" required />
+
+                        <!--Texto en gris, lista datalist (Admite escribir)-->
+                        <input type="text" id="conociste" name="conociste" placeholder="¿Cómo nos conociste?" required
+                            list="lista" />
+                        <datalist id="lista">
+                            <option value="Redes Sociales">Redes Sociales</option>
+                            <option value="Otro">Otro</option>
+                        </datalist>
+
+                        <!--Si quiero un datalist que solo acepte esas opciones-->
+                        <label for="pais">País:</label>
+                        <!--Numero de elementos a mostrar, mltiple opción, grupos de opciones-->
+                        <select id="pais" name="pais" size="2" required multiple>
+                            <option value="" disabled selected>Seleccione un país</option>
+                            <optgroup label="Europa">
+                                <option value="España">España</option>
+                                <option value="Francia">Francia</option>
+                            </optgroup>
+                            <optgroup label="América">
+                                <option value="México">México</option>
+                                <option value="Estados Unidos">Estados Unidos</option>
+                            </optgroup>
+                        </select>
+
+                        <!--Tambien hay type url, tel, color, search-->
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+
+                        <!--TextArea con sus filas y columnas-->
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" cols="50"></textarea>
+
+                        <!--Tipo Checkbox-->
+                        <label for="terminos">Acepto los términos y condiciones</label>
+                        <input type="checkbox" id="terminos" name="terminos" required />
+
+                        <!--Opciones, opción por defecto y agruparlas-->
+                        <fieldset>
+                            <legend>Selecciona una opción:</legend>
+                            <label for="opcion1">Opción 1</label>
+                            <input type="radio" id="opcion1" name="opcion" value="opcion1" checked />
+                            <label for="opcion2">Opción 2</label>
+                            <input type="radio" id="opcion2" name="opcion" value="opcion2" />
+                        </fieldset>
+
+                        <!--Contador con min,max y salto. Calendarios, barra con min max y valor y botones-->
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" name="edad" min="18" max="99" step="2" required />
+
+                        <!--Tambien hay type month, week, time y datetime-->
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" name="fecha" required />
+
+                        <label for="altura">Altura (cm):</label>
+                        <input type="range" id="altura" name="altura" min="0" max="200" value="50" />
+
+                        <input type="button" value="Enviar" />
+                        <input type="reset" value="Reiniciar" />
+                    </form>
+                </div>
+
+            </article>
+
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Pie de pagina</p>
+        <p>Derechos reservados &copy; 2023</p>
+    </footer>
+</body>
+
+</html>

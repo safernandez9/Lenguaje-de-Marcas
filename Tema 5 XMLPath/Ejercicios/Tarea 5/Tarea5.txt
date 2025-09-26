@@ -1,0 +1,55 @@
+a.) As máquinas con nome comezando por "PC".
+//máquina[starts-with(@nome,"PC")]
+
+
+b.) O nome das máquinas con máis de un disco duro.
+//máquina[count(hardware/disco)>1]/@nome
+
+
+c) A suma dos GB de memoria RAM de todas as máquinas.
+sum(//máquina/hardware/memoria)
+
+
+d) A suma das capacidades dos discos duros de tipo "SCSI".
+sum(//máquina/hardware/disco/@capacidade)
+
+
+e) Os nomes das máquinas das que se coñeza a súa cantidade de memoria, pero non a tecnoloxía desta.
+//máquina[hardware[memoria and not(memoria/@tecnoloxía)]]/@nome
+
+
+f) As máquinas con sistema operativo da familia Windows e gravadora de DVD.
+//máquina[contains(config/OS,'Windows') and hardware/gravadora]
+
+
+g) As máquinas nas que non figure o sistema operativo.
+//máquina[not(config/OS)]
+
+
+h) O nome da máquina e do SO daquelas máquinas con máis de un disco duro.
+//máquina[count(hardware/disco)>1]/concat(@nome," - ",config/OS)
+
+
+i) A configuración daquelas máquinas nas que figura unha dirección IP pero non o gateway.
+//config[IP and not(gateway)]
+
+
+j) Os elementos baleiros (non conteñen texto).
+//*[not(node())]
+
+
+k) As direccións IP dentro da rede 192.168.10.0/24.
+//IP[contains(text(),"192.168.10.") and string-length(text())<15]
+//IP[contains(text(),"192.168.10.") and number( substring-after( text(), "192.168.10." )  ) > -1 and number( substring-after( text(), "192.168.10." )  ) <256 ]
+
+
+l) Os nomes das máquinas con procesador multinúcleo e 2GB ou menos de memoria.
+//máquina[hardware/procesador/@num_nucleos > 1 and hardware/memoria <= 2]/@nome
+
+
+m) As máquinas que teñan disco duro (un ou varios) con capacidade total maior de 1000GB.
+//máquina[sum(hardware/disco/@capacidade) >= 1000]
+
+
+n) As máquinas que teñan disco duro (un ou varios) con capacidade total menor de 80GB.
+//máquina[sum(hardware/disco/@capacidade) < 80]

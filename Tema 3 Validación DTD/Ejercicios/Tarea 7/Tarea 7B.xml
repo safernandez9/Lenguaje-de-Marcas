@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE Informe SYSTEM "Tarea7B.dtd">
+<Informe>
+  <Descripcion>Informe de seguros de cliente VIP.</Descripcion>
+  <Seguro tipo="Edificio">
+    <Numero>12345</Numero>
+    <Cliente-Personal>Juan Pérez</Cliente-Personal>
+  </Seguro>
+
+  <Seguro tipo="Contenido">
+    <Numero>67890</Numero>
+    <Cliente-Empresa>Empresa S.A.</Cliente-Empresa>
+  </Seguro>
+
+  <FechaInforme FechaInicio="2025-01-01" FechaFin="2025-12-31"/>
+</Informe>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.1" encoding="utf-8"?>
+<ciclos xmlns="http://www.chandomonte.es/espazosdenomes/centro/" 
+        xmlns:mod="http://www.chandomonte.es/espazosdenomes/modulos/" 
+        xmlns:al="http://www.chandomonte.es/espazosdenomes/alumnos/">
+    <ciclo id="ASIR" grao="CS">
+        <mod:módulo id="MP0370">
+            <mod:nome>Planificación e administración de redes</mod:nome>
+            <mod:horas>213</mod:horas>
+        </mod:módulo>
+        <mod:módulo id="MP0371">
+            <mod:nome>Fundamentos hardware</mod:nome>
+            <mod:horas>107</mod:horas>
+        </mod:módulo>
+        <al:alumno>
+            <al:nome>Xoan</al:nome>
+            <al:apelidos>Cancedo da Foz</al:apelidos>
+            <al:datanacemento>06/11/1991</al:datanacemento>
+            <al:nota>Xa fixo outro ciclo</al:nota>
+            <al:módulo id="MP0370" nota="7">Planificación e administración de redes</al:módulo>
+            <al:módulo id="MP0371" nota="8">Fundamentos hardware</al:módulo>
+        </al:alumno>
+        <al:alumno>
+            <al:nome>Sara</al:nome>
+            <al:apelidos>Fernández</al:apelidos>
+            <al:datanacemento>06/12/1991</al:datanacemento>
+            <al:nota>Xa fixo outro ciclo</al:nota>
+            <al:módulo id="MP0370" nota="7">Planificación e administración de redes</al:módulo>
+            <al:módulo id="MP0371" nota="8">Fundamentos hardware</al:módulo>
+        </al:alumno>
+    </ciclo>
+</ciclos>

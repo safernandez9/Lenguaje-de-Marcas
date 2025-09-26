@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT curriculumVitae (presentación, (estudios | experienciaLaboral)+, (idiomas | deportes | otros)*, referencias*, observaciones?)>
+<!ELEMENT estudios (prácticas*)>
+<!ELEMENT prácticas (empresa+)>
+<!ELEMENT empresa (nombre, horas)>
+<!ATTLIST estudios notamedia CDATA #IMPLIED
+            id ID #REQUIRED >
+<!ATTLIST empresa estudisAsociados IDREF #REQUIRED> 
+
+
+
+
+
+
+
+
+
+
+
+
+<!ELEMENT idiomas EMPTY>
+<!ATTLIST idiomas nombre PCDATA #REQUIRED
+    
+    
